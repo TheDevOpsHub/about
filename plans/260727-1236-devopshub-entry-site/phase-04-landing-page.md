@@ -1,7 +1,7 @@
 ---
 phase: 4
 title: "Landing Page"
-status: pending
+status: complete (visual sign-off pending -- see plan.md validation log)
 priority: P1
 effort: "6h"
 dependencies: [3]
