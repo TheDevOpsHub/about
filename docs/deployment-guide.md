@@ -52,18 +52,34 @@ curated `tungbq` repos (individually, by name), merges them against
 4. On `schedule` runs only, a refreshed `data/github.json` is committed and pushed back.
 5. The `deploy` job publishes the artifact to the `github-pages` environment.
 
-## Cutover to GitHub Actions Pages (one-time)
+## How the domain is actually served
 
-The repo currently serves `index.html` straight off `main` via Pages' "Deploy from a
-branch" mode. Moving to this Next.js build requires **one manual step in repo settings**:
+```
+visitor → Cloudflare (TLS terminates here) → GitHub Pages (origin) → out/ from the workflow
+```
 
-**Settings → Pages → Build and deployment → Source → GitHub Actions**
+Two things follow from this, both of which are easy to get wrong:
 
-Until that flip happens, the live domain keeps serving the old `index.html` unchanged --
-the Actions workflow can run and deploy to the `github-pages` environment safely before the
-switch, since flipping the source is what actually points the domain at it.
+1. **Pages source is already `GitHub Actions`** (`build_type: workflow`). There is no
+   branch-based fallback in play. **Any merge to `main` deploys straight to the live
+   domain** -- there is no staging step and no intermediate gate. Treat a merge as a
+   production release.
+2. **GitHub's *Enforce HTTPS* checkbox cannot be used here.** DNS points at Cloudflare, not
+   at GitHub's IPs, so GitHub never provisions a certificate for the domain and the setting
+   fails with `The certificate does not exist yet`. The HTTP→HTTPS redirect lives in
+   **Cloudflare → SSL/TLS → Edge Certificates → Always Use HTTPS**. Also confirm
+   **SSL/TLS → Overview** is set to *Full* (or *Full (strict)*), not *Flexible* -- Flexible
+   leaves the Cloudflare→origin hop unencrypted while still showing visitors a padlock.
 
-After flipping, verify against the live domain before touching anything else:
+You can check the current state with:
+
+```bash
+gh api repos/TheDevOpsHub/about/pages --jq '{build_type, cname, https_enforced}'
+```
+
+## Verifying a release
+
+After any merge to `main`, verify against the live domain:
 
 - `https://thedevopshub.org/` and all four routes (`/`, `/projects/`, `/learning-paths/`,
   `/about/`) load over HTTPS with no mixed content
@@ -72,20 +88,32 @@ After flipping, verify against the live domain before touching anything else:
 - Both DAST verification metas (`insight-app-sec-validation`,
   `probely-verification` x2) are present in the served HTML
 
-Only once all of that passes: delete `index.html`, the root `CNAME`, and the (now empty)
-`assets/` directory in a follow-up commit. `public/CNAME` already ships in every build, so
-the custom domain survives the deletion.
+Quick pass:
+
+```bash
+for r in "" projects/ learning-paths/ about/ sitemap.xml robots.txt; do
+  echo "$(curl -s -o /dev/null -w '%{http_code}' https://thedevopshub.org/$r)  /$r"
+done
+curl -s https://thedevopshub.org/ | grep -cE 'probely-verification|insight-app-sec|G-42PBMZ1BRC'
+```
+
+`index.html` and the root `CNAME` are still in the tree as a content fallback. They are
+harmless (the workflow serves `out/`, not the repo root) and can be deleted whenever there
+is confidence in the new site. `public/CNAME` ships in every build, so the custom domain
+does not depend on the root copy.
 
 ## Rollback
 
-If the live site breaks after the cutover:
+Because Pages deploys from the workflow, rollback is a git operation, **not** a settings
+flip:
 
-1. **Settings → Pages → Build and deployment → Source → Deploy from a branch** (back to
-   `main` / root).
-2. The old `index.html` is still in the repo (not deleted until the step above), so the
-   domain immediately serves the previous working page again.
-3. Re-provisioning HTTPS after a source change can take a few minutes -- expect a short
-   window of cert warnings either direction, not a sign of a broken rollback.
+```bash
+git revert -m 1 <merge-commit>   # or: git revert <squash-commit>
+git push origin main             # workflow redeploys the previous out/
+```
 
-Do not delete `index.html` or the root `CNAME` until live verification has passed at least
-once; that file is the entire rollback plan.
+Expect roughly a minute for the workflow, plus Cloudflare's edge cache (`max-age=600`) to
+turn over -- purge the Cloudflare cache if the old content needs to appear immediately.
+
+Reverting to the pre-Next.js page specifically means reverting the PR #14 squash commit,
+which restores `index.html` as the site root.

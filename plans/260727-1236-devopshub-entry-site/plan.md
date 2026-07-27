@@ -22,7 +22,9 @@ Replace the single 245-line `index.html` at `thedevopshub.org` with a multi-page
 
 **Data:** build-time fetch of both the `TheDevOpsHub` org repos and the curated `tungbq` repos, refreshed nightly by cron. Curated blurbs stay hand-written; stars/forks/language/topics come from the API. The README's 20 unique repos split **13 org / 7 tungbq** (verified — see Validation Log).
 
-**Deployment change (the main risk):** the repo currently serves `index.html` straight off `main`. This moves to a GitHub Actions Pages deploy of `out/`. That requires one manual step from the user — flipping Pages source from *Deploy from a branch* to *GitHub Actions* in repo settings — and until it's flipped, the site does not change. Phase 1 lands the whole pipeline behind that switch so the live domain is never in a broken state.
+**Deployment change (the main risk):** the repo previously served `index.html` straight off `main`. This moved to a GitHub Actions Pages deploy of `out/`.
+
+> **Corrected after launch (2026-07-27).** This section originally assumed the Pages source was still *Deploy from a branch*, and that merging to `main` would therefore be safe until someone manually flipped it to *GitHub Actions*. **That assumption was wrong at merge time** — Pages was already `build_type: workflow`, so the squash-merge of PR #14 went straight to production with no intermediate gate. Everything verified clean, but the safety margin the plan described did not actually exist. See `docs/deployment-guide.md` for how the deploy really works.
 
 ### Assets that must survive the rewrite
 
@@ -46,7 +48,7 @@ Losing any of these silently breaks a scanner, analytics, or the domain itself. 
 | 4 | [Landing Page](./phase-04-landing-page.md) | Complete (visual sign-off pending) |
 | 5 | [Projects Explorer Route](./phase-05-projects-explorer-route.md) | Complete (visual sign-off pending) |
 | 6 | [Learning Paths and About Routes](./phase-06-learning-paths-and-about-routes.md) | Complete (visual sign-off pending) |
-| 7 | [QA Accessibility and Launch](./phase-07-qa-accessibility-and-launch.md) | Partial (axe/Lighthouse + cutover pending) |
+| 7 | [QA Accessibility and Launch](./phase-07-qa-accessibility-and-launch.md) | Shipped (axe/Lighthouse still pending) |
 
 **Order:** 1 → 2 → 3 are sequential (pipeline, then data, then shell). 4, 5, 6 all depend on 3 and can be built in any order. 7 is last.
 
@@ -71,7 +73,8 @@ Losing any of these silently breaks a scanner, analytics, or the domain itself. 
 
 - Node 22 (`.nvmrc`), npm
 - `GITHUB_TOKEN` — the workflow's built-in token is enough for public repo reads; no PAT needed
-- Repo setting change: Pages source → GitHub Actions (**manual, user-only**)
+- Repo setting change: Pages source → GitHub Actions — **already in place before launch**, so no manual flip was needed (see the corrected note above)
+- Cloudflare fronts the domain; the HTTP→HTTPS redirect lives there, not in GitHub Pages settings
 
 ## Reference
 
