@@ -46,7 +46,7 @@ Losing any of these silently breaks a scanner, analytics, or the domain itself. 
 | 4 | [Landing Page](./phase-04-landing-page.md) | Complete (visual sign-off pending) |
 | 5 | [Projects Explorer Route](./phase-05-projects-explorer-route.md) | Complete (visual sign-off pending) |
 | 6 | [Learning Paths and About Routes](./phase-06-learning-paths-and-about-routes.md) | Complete (visual sign-off pending) |
-| 7 | [QA Accessibility and Launch](./phase-07-qa-accessibility-and-launch.md) | Pending |
+| 7 | [QA Accessibility and Launch](./phase-07-qa-accessibility-and-launch.md) | Partial (axe/Lighthouse + cutover pending) |
 
 **Order:** 1 → 2 → 3 are sequential (pipeline, then data, then shell). 4, 5, 6 all depend on 3 and can be built in any order. 7 is last.
 

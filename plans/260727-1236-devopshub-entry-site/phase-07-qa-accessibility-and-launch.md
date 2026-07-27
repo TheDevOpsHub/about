@@ -1,7 +1,7 @@
 ---
 phase: 7
 title: "QA Accessibility and Launch"
-status: pending
+status: partial (steps 1-10 done; axe/Lighthouse unrunnable in this sandbox; steps 11-14 are user-gated cutover -- see plan.md)
 priority: P1
 effort: "4h"
 dependencies: [4, 5, 6]
