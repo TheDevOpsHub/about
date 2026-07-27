@@ -1,7 +1,7 @@
 ---
 phase: 7
 title: "QA Accessibility and Launch"
-status: partial (steps 1-10 done; axe/Lighthouse unrunnable in this sandbox; steps 11-14 are user-gated cutover -- see plan.md)
+status: shipped 2026-07-27 via PR #14 (live and verified; axe/Lighthouse still outstanding, needs a real browser)
 priority: P1
 effort: "4h"
 dependencies: [4, 5, 6]
@@ -28,7 +28,7 @@ Full-site verification, SEO wiring, then the actual cutover of `thedevopshub.org
 
 ## Architecture
 
-Cutover sequence, in order, with a rollback point before the irreversible step:
+### What was planned
 
 ```
 1. Verify build output locally (all assertions below)
@@ -40,7 +40,29 @@ Cutover sequence, in order, with a rollback point before the irreversible step:
 6. Only after step 5 passes: delete index.html and root CNAME in a follow-up commit
 ```
 
-Step 6 is deliberately last. Keeping `index.html` and the root `CNAME` until the new site is confirmed live means rollback is "flip Pages back to branch" with the old page still intact.
+### What actually happened
+
+**Steps 2–4 collapsed into one.** Pages was already set to `build_type: workflow` before the merge, so the
+squash-merge of PR #14 deployed straight to the live domain. There was no "still serving old index.html"
+window and no flip to perform — the plan's central safety property did not hold.
+
+The outcome was fine (live verification passed on the first check), but the lesson is worth keeping: the
+plan asserted a deploy gate without ever reading the actual Pages configuration. One
+`gh api repos/{owner}/{repo}/pages` call at plan time would have caught it. **Verify the deployment state
+you are designing around; do not infer it from the repo's file layout.**
+
+Two further corrections found during live verification:
+
+- **Cloudflare fronts the domain.** DNS resolves to Cloudflare IPs and TLS terminates there with a Google
+  Trust Services cert; GitHub Pages is only the origin. GitHub therefore has no certificate of its own, and
+  its *Enforce HTTPS* toggle returns `The certificate does not exist yet` and can never be enabled. The
+  HTTP→HTTPS redirect belongs in Cloudflare (SSL/TLS → Edge Certificates → Always Use HTTPS). The plan
+  never modelled Cloudflare at all.
+- **Rollback is not "flip Pages back to branch."** With the source already on Actions, rollback means
+  reverting the merge commit and letting the workflow redeploy. Keeping `index.html` and the root `CNAME`
+  in the tree is still worthwhile, but they are a content fallback, not a one-setting escape hatch.
+
+Step 6 (deleting `index.html` and the root `CNAME`) remains deliberately deferred.
 
 ## Related Code Files
 
