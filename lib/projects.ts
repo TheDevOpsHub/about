@@ -46,6 +46,20 @@ export function getTopics(): string[] {
   return Array.from(new Set(allProjects.flatMap((p) => p.stats.topics))).sort();
 }
 
+// Ordered by how many projects carry the topic, most common first --
+// lets the UI show only the top N without an arbitrary alphabetical cut.
+export function getTopicsByFrequency(): string[] {
+  const counts = new Map<string, number>();
+  for (const project of allProjects) {
+    for (const topic of project.stats.topics) {
+      counts.set(topic, (counts.get(topic) ?? 0) + 1);
+    }
+  }
+  return Array.from(counts.entries())
+    .sort((a, b) => b[1] - a[1] || a[0].localeCompare(b[0]))
+    .map(([topic]) => topic);
+}
+
 export function getAggregateStats() {
   return {
     totalStars: allProjects.reduce((sum, p) => sum + p.stats.stars, 0),

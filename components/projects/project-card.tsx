@@ -4,7 +4,7 @@ import type { Project } from "@/types/github";
 
 export function ProjectCard({ project }: { project: Project }) {
   return (
-    <article className="group flex flex-col gap-3 rounded-lg border border-border bg-surface p-5 transition-all duration-300 hover:-translate-y-1 hover:border-accent-2/40 hover:shadow-lg hover:shadow-accent-2/10">
+    <article className="project-card group flex flex-col gap-3 rounded-lg border border-border bg-surface p-5 transition-all duration-300 hover:-translate-y-1 hover:border-accent-2/40 hover:shadow-lg hover:shadow-accent-2/10">
       <div className="flex items-start justify-between gap-3">
         <h3 className="text-lg font-semibold text-foreground">
           <a

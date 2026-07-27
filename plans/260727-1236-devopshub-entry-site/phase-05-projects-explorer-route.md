@@ -1,7 +1,7 @@
 ---
 phase: 5
 title: "Projects Explorer Route"
-status: pending
+status: complete (visual sign-off pending -- see plan.md validation log)
 priority: P1
 effort: "5h"
 dependencies: [3]

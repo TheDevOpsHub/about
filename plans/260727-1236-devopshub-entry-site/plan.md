@@ -44,7 +44,7 @@ Losing any of these silently breaks a scanner, analytics, or the domain itself. 
 | 2 | [GitHub Data Pipeline](./phase-02-github-data-pipeline.md) | Complete |
 | 3 | [Design System and App Shell](./phase-03-design-system-and-app-shell.md) | Complete (visual sign-off pending) |
 | 4 | [Landing Page](./phase-04-landing-page.md) | Complete (visual sign-off pending) |
-| 5 | [Projects Explorer Route](./phase-05-projects-explorer-route.md) | Pending |
+| 5 | [Projects Explorer Route](./phase-05-projects-explorer-route.md) | Complete (visual sign-off pending) |
 | 6 | [Learning Paths and About Routes](./phase-06-learning-paths-and-about-routes.md) | Pending |
 | 7 | [QA Accessibility and Launch](./phase-07-qa-accessibility-and-launch.md) | Pending |
 
