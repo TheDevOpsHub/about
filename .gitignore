@@ -42,3 +42,4 @@ next-env.d.ts
 
 # local planning / agent state, not part of the shipped project
 /.claude/
+/docs/journals/
