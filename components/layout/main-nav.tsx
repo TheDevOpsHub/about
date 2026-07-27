@@ -2,7 +2,7 @@
 
 import Link from "next/link";
 import { usePathname } from "next/navigation";
-import { navLinks } from "@/lib/nav-links";
+import { navLinks, isActiveRoute } from "@/lib/nav-links";
 
 export function MainNav() {
   const pathname = usePathname();
@@ -10,7 +10,7 @@ export function MainNav() {
   return (
     <nav aria-label="Main" className="hidden items-center gap-6 md:flex">
       {navLinks.map((link) => {
-        const isActive = pathname === link.href;
+        const isActive = isActiveRoute(pathname, link.href);
         return (
           <Link
             key={link.href}

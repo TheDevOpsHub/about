@@ -26,3 +26,10 @@ export const navLinks: NavLink[] = [
     description: "Who maintains the Hub and how to reach out",
   },
 ];
+
+// next.config.ts sets trailingSlash: true, so usePathname() returns
+// "/projects/" while nav-links.ts stays trailing-slash-free for readability.
+export function isActiveRoute(pathname: string, href: string): boolean {
+  if (href === "/") return pathname === "/";
+  return pathname === href || pathname === `${href}/`;
+}

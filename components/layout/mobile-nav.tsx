@@ -4,7 +4,7 @@ import { useEffect, useId, useRef, useState } from "react";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { Menu, X } from "lucide-react";
-import { navLinks } from "@/lib/nav-links";
+import { navLinks, isActiveRoute } from "@/lib/nav-links";
 
 export function MobileNav() {
   const pathname = usePathname();
@@ -78,7 +78,7 @@ export function MobileNav() {
         >
           <nav aria-label="Mobile" className="flex flex-col gap-4">
             {navLinks.map((link) => {
-              const isActive = pathname === link.href;
+              const isActive = isActiveRoute(pathname, link.href);
               return (
                 <Link
                   key={link.href}

@@ -1,7 +1,7 @@
 ---
 phase: 6
 title: "Learning Paths and About Routes"
-status: pending
+status: complete (visual sign-off pending -- see plan.md validation log)
 priority: P2
 effort: "4h"
 dependencies: [3]
