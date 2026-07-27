@@ -1,0 +1,357 @@
+{
+  "generatedAt": "2026-07-27",
+  "orgProfile": {
+    "login": "TheDevOpsHub",
+    "name": "TheDevOpsHub",
+    "avatarUrl": "https://github.com/TheDevOpsHub.png",
+    "publicRepos": 60
+  },
+  "repos": {
+    "AWSHub": {
+      "name": "AWSHub",
+      "owner": "tungbq",
+      "description": "📚 Collection of AWS Services documentation and learning resources ☁️",
+      "stars": 86,
+      "forks": 19,
+      "language": "Shell",
+      "topics": [
+        "aws",
+        "aws-saa",
+        "certification",
+        "cloud",
+        "cloud-computing",
+        "devops",
+        "documentation",
+        "learning"
+      ],
+      "htmlUrl": "https://github.com/tungbq/AWSHub",
+      "pushedAt": "2024-07-13T05:22:56Z",
+      "archived": false
+    },
+    "AZ-104": {
+      "name": "AZ-104",
+      "owner": "TheDevOpsHub",
+      "description": "AZ-104 certification preparation notes",
+      "stars": 13,
+      "forks": 7,
+      "language": null,
+      "topics": [
+        "az-104",
+        "azure"
+      ],
+      "htmlUrl": "https://github.com/TheDevOpsHub/AZ-104",
+      "pushedAt": "2025-08-30T09:43:04Z",
+      "archived": false
+    },
+    "AnsibleHub": {
+      "name": "AnsibleHub",
+      "owner": "TheDevOpsHub",
+      "description": "The Ansible Hub",
+      "stars": 1,
+      "forks": 0,
+      "language": null,
+      "topics": [],
+      "htmlUrl": "https://github.com/TheDevOpsHub/AnsibleHub",
+      "pushedAt": "2024-10-05T00:47:35Z",
+      "archived": false
+    },
+    "AzureHub": {
+      "name": "AzureHub",
+      "owner": "TheDevOpsHub",
+      "description": "☁️ Collection of Azure documentation and learning resources",
+      "stars": 13,
+      "forks": 3,
+      "language": "Shell",
+      "topics": [
+        "az-104",
+        "az-900",
+        "azure",
+        "certification",
+        "cloud",
+        "cloud-computing",
+        "devops",
+        "documentation"
+      ],
+      "htmlUrl": "https://github.com/TheDevOpsHub/AzureHub",
+      "pushedAt": "2025-07-26T08:39:29Z",
+      "archived": false
+    },
+    "Books": {
+      "name": "Books",
+      "owner": "TheDevOpsHub",
+      "description": "📚 Collection of DevOps books",
+      "stars": 2,
+      "forks": 0,
+      "language": null,
+      "topics": [
+        "book",
+        "cloud",
+        "devops",
+        "kubernetes"
+      ],
+      "htmlUrl": "https://github.com/TheDevOpsHub/Books",
+      "pushedAt": "2024-05-18T08:13:16Z",
+      "archived": false
+    },
+    "JenkinsHub": {
+      "name": "JenkinsHub",
+      "owner": "TheDevOpsHub",
+      "description": "The Jenkins Hub",
+      "stars": 3,
+      "forks": 0,
+      "language": null,
+      "topics": [],
+      "htmlUrl": "https://github.com/TheDevOpsHub/JenkinsHub",
+      "pushedAt": "2024-07-25T16:19:07Z",
+      "archived": false
+    },
+    "LinuxHub": {
+      "name": "LinuxHub",
+      "owner": "TheDevOpsHub",
+      "description": "Linux practices, tips and tricks",
+      "stars": 1,
+      "forks": 0,
+      "language": null,
+      "topics": [],
+      "htmlUrl": "https://github.com/TheDevOpsHub/LinuxHub",
+      "pushedAt": "2024-07-07T12:23:13Z",
+      "archived": false
+    },
+    "MonitoringHub": {
+      "name": "MonitoringHub",
+      "owner": "TheDevOpsHub",
+      "description": "Monitoring Hub - ELK, Prometheus and more...",
+      "stars": 1,
+      "forks": 1,
+      "language": null,
+      "topics": [],
+      "htmlUrl": "https://github.com/TheDevOpsHub/MonitoringHub",
+      "pushedAt": "2024-05-12T06:47:36Z",
+      "archived": false
+    },
+    "TerraformHub": {
+      "name": "TerraformHub",
+      "owner": "TheDevOpsHub",
+      "description": "🚀 Practical and document place for Terraform",
+      "stars": 6,
+      "forks": 2,
+      "language": "HCL",
+      "topics": [
+        "aws",
+        "cloud",
+        "devops",
+        "iac",
+        "iac-terraform",
+        "terraform"
+      ],
+      "htmlUrl": "https://github.com/TheDevOpsHub/TerraformHub",
+      "pushedAt": "2024-07-25T16:02:14Z",
+      "archived": false
+    },
+    "ansible-template": {
+      "name": "ansible-template",
+      "owner": "TheDevOpsHub",
+      "description": "Ansible template repository with CI, linting, containerization, and more...",
+      "stars": 2,
+      "forks": 0,
+      "language": "Dockerfile",
+      "topics": [],
+      "htmlUrl": "https://github.com/TheDevOpsHub/ansible-template",
+      "pushedAt": "2024-07-22T16:14:26Z",
+      "archived": false
+    },
+    "aws-lab-with-terraform": {
+      "name": "aws-lab-with-terraform",
+      "owner": "tungbq",
+      "description": "Collection of Terraform code for AWS labs",
+      "stars": 15,
+      "forks": 16,
+      "language": "HCL",
+      "topics": [
+        "aws",
+        "deploy",
+        "deployment",
+        "devops",
+        "iac",
+        "iac-terraform",
+        "terraform"
+      ],
+      "htmlUrl": "https://github.com/tungbq/aws-lab-with-terraform",
+      "pushedAt": "2026-03-05T04:15:48Z",
+      "archived": false
+    },
+    "cmd": {
+      "name": "cmd",
+      "owner": "tungbq",
+      "description": "A bookmark of essential commands for a software engineer's daily tasks :bookmark:",
+      "stars": 30,
+      "forks": 2,
+      "language": null,
+      "topics": [
+        "bookmark",
+        "cheatsheet",
+        "cli",
+        "cmd",
+        "command-line",
+        "commands",
+        "note"
+      ],
+      "htmlUrl": "https://github.com/tungbq/cmd",
+      "pushedAt": "2026-01-03T09:50:30Z",
+      "archived": false
+    },
+    "container-labs": {
+      "name": "container-labs",
+      "owner": "TheDevOpsHub",
+      "description": "🐳 DevOps practice project designed to set up and manage multiple labs environments using Docker containers",
+      "stars": 7,
+      "forks": 3,
+      "language": "Dockerfile",
+      "topics": [
+        "container",
+        "devops",
+        "devops-practice",
+        "docker",
+        "docker-compose",
+        "labs",
+        "practice"
+      ],
+      "htmlUrl": "https://github.com/TheDevOpsHub/container-labs",
+      "pushedAt": "2025-08-09T13:55:24Z",
+      "archived": false
+    },
+    "devops-basics": {
+      "name": "devops-basics",
+      "owner": "tungbq",
+      "description": "🚀 Practical and document place for DevOps toolchain",
+      "stars": 1868,
+      "forks": 213,
+      "language": "HCL",
+      "topics": [
+        "ansible",
+        "aws",
+        "cd",
+        "ci",
+        "ci-cd",
+        "cloud",
+        "devops",
+        "devops-basic",
+        "devops-project",
+        "devops-tool",
+        "devops-tools",
+        "docker",
+        "elk",
+        "helm",
+        "iac",
+        "jenkins",
+        "k8s",
+        "monitoring",
+        "python",
+        "terraform"
+      ],
+      "htmlUrl": "https://github.com/tungbq/devops-basics",
+      "pushedAt": "2026-07-27T10:20:00Z",
+      "archived": false
+    },
+    "devops-practice": {
+      "name": "devops-practice",
+      "owner": "tungbq",
+      "description": "A place to learn and practice DevOps in a hands-on way 🎮",
+      "stars": 31,
+      "forks": 11,
+      "language": "HCL",
+      "topics": [
+        "cicd",
+        "devops",
+        "devops-practice",
+        "devops-project",
+        "devops-tools",
+        "learning-by-doing",
+        "pracitce"
+      ],
+      "htmlUrl": "https://github.com/tungbq/devops-practice",
+      "pushedAt": "2024-09-17T06:38:25Z",
+      "archived": false
+    },
+    "devops-project": {
+      "name": "devops-project",
+      "owner": "tungbq",
+      "description": "Collection of DevOps projects to level up your DevOps skills",
+      "stars": 100,
+      "forks": 47,
+      "language": "HCL",
+      "topics": [
+        "aws",
+        "azure",
+        "cicd",
+        "cloud",
+        "devops",
+        "devops-practice",
+        "devops-project",
+        "devops-tools",
+        "docker",
+        "k8s",
+        "terraform"
+      ],
+      "htmlUrl": "https://github.com/tungbq/devops-project",
+      "pushedAt": "2026-07-27T05:29:03Z",
+      "archived": false
+    },
+    "k8sHub": {
+      "name": "K8sHub",
+      "owner": "tungbq",
+      "description": "Kubernetes deployment samples, practices, and examples",
+      "stars": 13,
+      "forks": 5,
+      "language": "Shell",
+      "topics": [],
+      "htmlUrl": "https://github.com/tungbq/K8sHub",
+      "pushedAt": "2024-07-30T16:34:56Z",
+      "archived": false
+    },
+    "microservices-deployment": {
+      "name": "microservices-deployment",
+      "owner": "TheDevOpsHub",
+      "description": "Sample microservices deployment on k8s with Nginx proxy, Prometheus monitoring stack, logging features...",
+      "stars": 4,
+      "forks": 1,
+      "language": null,
+      "topics": [
+        "devops",
+        "grafana",
+        "kubernetes",
+        "kubernetes-deployment",
+        "microservices",
+        "monitoring",
+        "prometheus"
+      ],
+      "htmlUrl": "https://github.com/TheDevOpsHub/microservices-deployment",
+      "pushedAt": "2024-09-30T03:44:57Z",
+      "archived": false
+    },
+    "prometheus-stack": {
+      "name": "prometheus-stack",
+      "owner": "TheDevOpsHub",
+      "description": "Docker compose for the Prometheus monitoring stack",
+      "stars": 2,
+      "forks": 0,
+      "language": null,
+      "topics": [],
+      "htmlUrl": "https://github.com/TheDevOpsHub/prometheus-stack",
+      "pushedAt": "2024-09-05T16:30:48Z",
+      "archived": false
+    },
+    "terraform-template": {
+      "name": "terraform-template",
+      "owner": "TheDevOpsHub",
+      "description": "Terraform project template for deploying infrastructure across multiple environments and regions, following best practices with modular structure and automated syntax checks",
+      "stars": 2,
+      "forks": 0,
+      "language": "HCL",
+      "topics": [],
+      "htmlUrl": "https://github.com/TheDevOpsHub/terraform-template",
+      "pushedAt": "2024-10-05T01:16:23Z",
+      "archived": false
+    }
+  }
+}

@@ -5,9 +5,11 @@
   "type": "module",
   "scripts": {
     "dev": "next dev",
-    "build": "next build",
+    "build": "node scripts/fetch-github-data.mjs && next build",
+    "build:nofetch": "next build",
     "start": "next start",
-    "lint": "eslint"
+    "lint": "eslint",
+    "test": "node --experimental-strip-types --test scripts/*.test.mjs lib/*.test.mjs"
   },
   "dependencies": {
     "fuse.js": "^7.5.0",

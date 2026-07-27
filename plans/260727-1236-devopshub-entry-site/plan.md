@@ -41,7 +41,7 @@ Losing any of these silently breaks a scanner, analytics, or the domain itself. 
 | Phase | Name | Status |
 |-------|------|--------|
 | 1 | [Scaffold and Pages Deploy Pipeline](./phase-01-scaffold-and-pages-deploy-pipeline.md) | Complete |
-| 2 | [GitHub Data Pipeline](./phase-02-github-data-pipeline.md) | Pending |
+| 2 | [GitHub Data Pipeline](./phase-02-github-data-pipeline.md) | Complete |
 | 3 | [Design System and App Shell](./phase-03-design-system-and-app-shell.md) | Pending |
 | 4 | [Landing Page](./phase-04-landing-page.md) | Pending |
 | 5 | [Projects Explorer Route](./phase-05-projects-explorer-route.md) | Pending |
