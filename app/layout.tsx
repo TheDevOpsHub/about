@@ -3,6 +3,10 @@ import { Geist, Geist_Mono } from "next/font/google";
 import Script from "next/script";
 import "./globals.css";
 import { OrganizationJsonLd } from "@/components/seo/organization-json-ld";
+import { ThemeProvider } from "@/components/theme-provider";
+import { SkipLink } from "@/components/layout/skip-link";
+import { SiteHeader } from "@/components/layout/site-header";
+import { SiteFooter } from "@/components/layout/site-footer";
 import { siteConfig } from "@/lib/site-config";
 
 const geistSans = Geist({
@@ -78,7 +82,14 @@ export default function RootLayout({
         <OrganizationJsonLd />
       </head>
       <body className="flex min-h-full flex-col bg-background text-foreground">
-        {children}
+        <ThemeProvider>
+          <SkipLink />
+          <SiteHeader />
+          <main id="main" className="flex-1">
+            {children}
+          </main>
+          <SiteFooter />
+        </ThemeProvider>
         <Script
           src="https://www.googletagmanager.com/gtag/js?id=G-42PBMZ1BRC"
           strategy="afterInteractive"

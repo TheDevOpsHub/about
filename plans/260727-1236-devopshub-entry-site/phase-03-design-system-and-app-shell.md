@@ -1,7 +1,7 @@
 ---
 phase: 3
 title: "Design System and App Shell"
-status: pending
+status: complete (visual sign-off pending -- see plan.md validation log)
 priority: P1
 effort: "5h"
 dependencies: [2]
