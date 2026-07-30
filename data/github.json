@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-07-29",
+  "generatedAt": "2026-07-30",
   "orgProfile": {
     "login": "TheDevOpsHub",
     "name": "TheDevOpsHub",
@@ -12,7 +12,7 @@
       "owner": "tungbq",
       "description": "📚 Collection of AWS Services documentation and learning resources ☁️",
       "stars": 86,
-      "forks": 19,
+      "forks": 20,
       "language": "Shell",
       "topics": [
         "aws",
@@ -224,7 +224,7 @@
       "name": "devops-basics",
       "owner": "tungbq",
       "description": "🚀 Practical and document place for DevOps toolchain",
-      "stars": 1869,
+      "stars": 1868,
       "forks": 213,
       "language": "HCL",
       "topics": [
@@ -250,7 +250,7 @@
         "terraform"
       ],
       "htmlUrl": "https://github.com/tungbq/devops-basics",
-      "pushedAt": "2026-07-27T10:20:00Z",
+      "pushedAt": "2026-07-29T13:21:58Z",
       "archived": false
     },
     "devops-practice": {
