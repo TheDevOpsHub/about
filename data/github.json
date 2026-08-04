@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-08-03",
+  "generatedAt": "2026-08-04",
   "orgProfile": {
     "login": "TheDevOpsHub",
     "name": "TheDevOpsHub",
@@ -32,7 +32,7 @@
       "name": "AZ-104",
       "owner": "TheDevOpsHub",
       "description": "AZ-104 certification preparation notes",
-      "stars": 14,
+      "stars": 15,
       "forks": 7,
       "language": null,
       "topics": [
@@ -250,7 +250,7 @@
         "terraform"
       ],
       "htmlUrl": "https://github.com/tungbq/devops-basics",
-      "pushedAt": "2026-07-29T13:21:58Z",
+      "pushedAt": "2026-08-03T22:53:01Z",
       "archived": false
     },
     "devops-practice": {
