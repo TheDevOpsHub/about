@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-08-06",
+  "generatedAt": "2026-08-07",
   "orgProfile": {
     "login": "TheDevOpsHub",
     "name": "TheDevOpsHub",
@@ -32,7 +32,7 @@
       "name": "AZ-104",
       "owner": "TheDevOpsHub",
       "description": "AZ-104 certification preparation notes",
-      "stars": 15,
+      "stars": 16,
       "forks": 7,
       "language": null,
       "topics": [
@@ -224,7 +224,7 @@
       "name": "devops-basics",
       "owner": "tungbq",
       "description": "🚀 Practical and document place for DevOps toolchain",
-      "stars": 1869,
+      "stars": 1870,
       "forks": 213,
       "language": "HCL",
       "topics": [
@@ -313,7 +313,7 @@
       "name": "microservices-deployment",
       "owner": "TheDevOpsHub",
       "description": "Sample microservices deployment on k8s with Nginx proxy, Prometheus monitoring stack, logging features...",
-      "stars": 4,
+      "stars": 5,
       "forks": 1,
       "language": null,
       "topics": [
