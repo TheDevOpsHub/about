@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-08-16",
+  "generatedAt": "2026-08-23",
   "orgProfile": {
     "login": "TheDevOpsHub",
     "name": "TheDevOpsHub",
@@ -32,7 +32,7 @@
       "name": "AZ-104",
       "owner": "TheDevOpsHub",
       "description": "AZ-104 certification preparation notes",
-      "stars": 16,
+      "stars": 17,
       "forks": 8,
       "language": null,
       "topics": [
@@ -186,7 +186,7 @@
       "description": "A bookmark of essential commands for a software engineer's daily tasks :bookmark:",
       "stars": 30,
       "forks": 2,
-      "language": null,
+      "language": "CSS",
       "topics": [
         "bookmark",
         "cheatsheet",
@@ -197,7 +197,7 @@
         "note"
       ],
       "htmlUrl": "https://github.com/tungbq/cmd",
-      "pushedAt": "2026-01-03T09:50:30Z",
+      "pushedAt": "2026-08-20T07:14:13Z",
       "archived": false
     },
     "container-labs": {
@@ -224,8 +224,8 @@
       "name": "devops-basics",
       "owner": "tungbq",
       "description": "🚀 Practical and document place for DevOps toolchain",
-      "stars": 1873,
-      "forks": 215,
+      "stars": 1874,
+      "forks": 213,
       "language": "HCL",
       "topics": [
         "ansible",
@@ -250,7 +250,7 @@
         "terraform"
       ],
       "htmlUrl": "https://github.com/tungbq/devops-basics",
-      "pushedAt": "2026-08-16T03:12:20Z",
+      "pushedAt": "2026-08-16T06:54:25Z",
       "archived": false
     },
     "devops-practice": {
@@ -278,7 +278,7 @@
       "owner": "tungbq",
       "description": "Collection of DevOps projects to level up your DevOps skills",
       "stars": 102,
-      "forks": 47,
+      "forks": 48,
       "language": "HCL",
       "topics": [
         "aws",
@@ -313,7 +313,7 @@
       "name": "microservices-deployment",
       "owner": "TheDevOpsHub",
       "description": "Sample microservices deployment on k8s with Nginx proxy, Prometheus monitoring stack, logging features...",
-      "stars": 5,
+      "stars": 4,
       "forks": 1,
       "language": null,
       "topics": [
