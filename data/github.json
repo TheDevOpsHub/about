@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-08-23",
+  "generatedAt": "2026-08-30",
   "orgProfile": {
     "login": "TheDevOpsHub",
     "name": "TheDevOpsHub",
@@ -224,7 +224,7 @@
       "name": "devops-basics",
       "owner": "tungbq",
       "description": "🚀 Practical and document place for DevOps toolchain",
-      "stars": 1874,
+      "stars": 1876,
       "forks": 213,
       "language": "HCL",
       "topics": [
@@ -294,7 +294,7 @@
         "terraform"
       ],
       "htmlUrl": "https://github.com/tungbq/devops-project",
-      "pushedAt": "2026-07-27T05:29:03Z",
+      "pushedAt": "2026-08-30T05:27:09Z",
       "archived": false
     },
     "k8sHub": {
