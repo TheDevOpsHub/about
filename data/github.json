@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-09-13",
+  "generatedAt": "2026-09-20",
   "orgProfile": {
     "login": "TheDevOpsHub",
     "name": "TheDevOpsHub",
@@ -32,7 +32,7 @@
       "name": "AZ-104",
       "owner": "TheDevOpsHub",
       "description": "AZ-104 certification preparation notes",
-      "stars": 18,
+      "stars": 20,
       "forks": 8,
       "language": null,
       "topics": [
@@ -164,7 +164,7 @@
       "name": "aws-lab-with-terraform",
       "owner": "tungbq",
       "description": "Collection of Terraform code for AWS labs",
-      "stars": 15,
+      "stars": 14,
       "forks": 18,
       "language": "HCL",
       "topics": [
@@ -294,7 +294,7 @@
         "terraform"
       ],
       "htmlUrl": "https://github.com/tungbq/devops-project",
-      "pushedAt": "2026-09-13T08:36:00Z",
+      "pushedAt": "2026-09-15T23:33:53Z",
       "archived": false
     },
     "k8sHub": {
