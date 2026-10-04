@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-09-27",
+  "generatedAt": "2026-10-04",
   "orgProfile": {
     "login": "TheDevOpsHub",
     "name": "TheDevOpsHub",
@@ -224,7 +224,7 @@
       "name": "devops-basics",
       "owner": "tungbq",
       "description": "🚀 Practical and document place for DevOps toolchain",
-      "stars": 1880,
+      "stars": 1882,
       "forks": 212,
       "language": "Shell",
       "topics": [
