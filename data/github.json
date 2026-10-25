@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-10-18",
+  "generatedAt": "2026-10-25",
   "orgProfile": {
     "login": "TheDevOpsHub",
     "name": "TheDevOpsHub",
@@ -32,7 +32,7 @@
       "name": "AZ-104",
       "owner": "TheDevOpsHub",
       "description": "AZ-104 certification preparation notes",
-      "stars": 21,
+      "stars": 22,
       "forks": 7,
       "language": null,
       "topics": [
@@ -224,7 +224,7 @@
       "name": "devops-basics",
       "owner": "tungbq",
       "description": "🚀 Practical and document place for DevOps toolchain",
-      "stars": 1879,
+      "stars": 1878,
       "forks": 212,
       "language": "Shell",
       "topics": [
@@ -278,7 +278,7 @@
       "owner": "tungbq",
       "description": "Collection of DevOps projects to level up your DevOps skills",
       "stars": 102,
-      "forks": 48,
+      "forks": 50,
       "language": "HCL",
       "topics": [
         "aws",
