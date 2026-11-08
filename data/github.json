@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-11-01",
+  "generatedAt": "2026-11-08",
   "orgProfile": {
     "login": "TheDevOpsHub",
     "name": "TheDevOpsHub",
@@ -224,8 +224,8 @@
       "name": "devops-basics",
       "owner": "tungbq",
       "description": "🚀 Practical and document place for DevOps toolchain",
-      "stars": 1876,
-      "forks": 213,
+      "stars": 1875,
+      "forks": 214,
       "language": "Shell",
       "topics": [
         "ansible",
@@ -277,7 +277,7 @@
       "name": "devops-project",
       "owner": "tungbq",
       "description": "Collection of DevOps projects to level up your DevOps skills",
-      "stars": 102,
+      "stars": 103,
       "forks": 51,
       "language": "HCL",
       "topics": [
